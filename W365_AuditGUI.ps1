@@ -386,7 +386,6 @@ function Export-ToCsv {
         }
     }
 }
-
 # Event Handlers
 $loadButton.Add_Click({ Get-AuditData })
 $filterButton.Add_Click({ Invoke-Filters })
