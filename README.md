@@ -149,6 +149,12 @@ To display more audit event properties, expand the `Select-Object` and `Update-D
 
 This script is provided as-is for use within organizations using Windows 365 Cloud PC services.
 
+### Disclaimer
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+The author(s) assume no responsibility for any damage, data loss, or misuse resulting from the use of this script. Users are responsible for ensuring proper testing in non-production environments and compliance with their organization's security policies and applicable regulations.
+
 ## Contributing
 
 Feel free to submit issues, fork the repository, and create pull requests for any improvements.
