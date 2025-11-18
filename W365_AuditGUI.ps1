@@ -303,8 +303,8 @@ function Update-DataGrid {
         $row["Activity DateTime"] = $item.ActivityDateTime
         $row["Activity Type"] = $item.ActivityType
         $row["Activity Result"] = $item.ActivityResult
-        $row["Resource Id"] = $item.ResourceId
         $row["User Id"] = $item.UserId
+        $row["Resource Id"] = $item.ResourceId
         $row["User Principal Name"] = $item.UserPrincipalName
         $dataTable.Rows.Add($row)
     }
