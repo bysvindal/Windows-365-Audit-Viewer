@@ -198,9 +198,7 @@ function Get-AuditData {
         $statusLabel.Text = "Fetching audit events..."
         $form.Refresh()
         
-        $auditEvents = Get-MgBetaDeviceManagementVirtualEndpointAuditEvent -All | 
-            Select-Object -Property ActivityDateTime,ActivityType,ActivityResult -ExpandProperty Actor | 
-            Select-Object ActivityDateTime,ActivityType,ActivityResult,UserId,UserPrincipalName
+        $auditEvents = Get-MgBetaDeviceManagementVirtualEndpointAuditEvent -All | Select-Object -Property ActivityDateTime,ActivityType,ActivityResult,Resources -ExpandProperty Actor | Select-Object -Property ActivityDateTime,ActivityType,ActivityResult,UserId,UserPrincipalName, Resources -ExpandProperty Resources | Select-Object ActivityDateTime,ActivityType,ActivityResult,ResourceId,UserId,UserPrincipalName
         
         $progressBar.Value = 60
         $progressLabel.Text = "60%"
@@ -296,6 +294,7 @@ function Update-DataGrid {
     $dataTable.Columns.Add("Activity Type", [string]) | Out-Null
     $dataTable.Columns.Add("Activity Result", [string]) | Out-Null
     $dataTable.Columns.Add("User Id", [string]) | Out-Null
+    $dataTable.Columns.Add("Resource Id", [string]) | Out-Null
     $dataTable.Columns.Add("User Principal Name", [string]) | Out-Null
     
     # Add rows
@@ -304,6 +303,7 @@ function Update-DataGrid {
         $row["Activity DateTime"] = $item.ActivityDateTime
         $row["Activity Type"] = $item.ActivityType
         $row["Activity Result"] = $item.ActivityResult
+        $row["Resource Id"] = $item.ResourceId
         $row["User Id"] = $item.UserId
         $row["User Principal Name"] = $item.UserPrincipalName
         $dataTable.Rows.Add($row)
